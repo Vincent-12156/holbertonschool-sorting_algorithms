@@ -1,0 +1,3 @@
+Best case scenario: O(n) comparisons and O(1) swap
+Average case scenario: O(n²) comparisons and O(n²) swaps
+Worst case scenario: O(n²) comparisons and O(n²) swaps
