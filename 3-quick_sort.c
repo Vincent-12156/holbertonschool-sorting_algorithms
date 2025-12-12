@@ -29,13 +29,13 @@ int pivot_index(int *array, int start, int end, size_t size)
 				print_array(array, size);
 		}
 	}
-	if (i + 1 != end)
-	{
+
 	tmp = array[i + 1];
 	array[i + 1] = array[end];
 	array[end] = tmp;
-	print_array(array, size);
-	}
+
+	if (i + 1 != end)
+		print_array(array, size);
 
 	return (i + 1);
 }
