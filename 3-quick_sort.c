@@ -15,20 +15,18 @@ int pivot_index(int *array, int start, int end, size_t size)
 	int j;
 	int i = start - 1;
 	int tmp;
-	int swapped = 0;
 
 	for (j = start; j < end; j++)
 	{
 		if (array[j] < pivot)
 		{
 			i++;
+			tmp = array[i];
+			array[i] = array[j];
+			array[j] = tmp;
+
 			if (i != j)
-			{
-				tmp = array[i];
-				array[i] = array[j];
-				array[j] = tmp;
-				swapped = 1;
-			}
+				print_array(array, size);
 		}
 	}
 	if (i + 1 != end)
@@ -38,9 +36,6 @@ int pivot_index(int *array, int start, int end, size_t size)
 	array[end] = tmp;
 	print_array(array, size);
 	}
-
-	if (swapped == 1)
-		print_array(array, size);
 
 	return (i + 1);
 }
