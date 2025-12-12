@@ -28,3 +28,4 @@ int pivot_index(int *array, int start, int end, size_t size);
 void quick_sort_lomuto(int *array, int start, int end, size_t size);
 
 #endif
+
